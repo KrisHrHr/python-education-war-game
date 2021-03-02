@@ -122,11 +122,18 @@ def run_game(pl1, pl2):
     else:
         print("Winner is {}".format(pl1.name))
 
-#to be done - get user input for number of players and depending on how many players are selected (2-4) draw players decks
-#for now hardcoded to 2
+#get number of players from user input
+def get_num_players():
+    num = 'Default'
+    while num not in range(2,5):
+        num = int(input("Enter number of players for war game(2-4): "))
+    return num
 
 new_deck = Deck()
 new_deck.shuffle_deck()
+#get number of players from user input
+num_of_players = get_num_players()
+print(num_of_players)
 player1 = Player('Kris')
 player2 = Player('Mris')
 for i in range(0,26):
