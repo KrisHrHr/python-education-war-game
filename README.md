@@ -1,2 +1,2 @@
-# war_initial
+# war
 card game war repo
